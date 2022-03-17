@@ -1,4 +1,4 @@
-# A program to encode words in morse code
+# A program to encode words to morse code
 MORSE_CODE_DICTIONARY = {'A': '.-', 'B': '-...',
                          'C': '-.-.', 'D': '-..', 'E': '.',
                          'F': '..-.', 'G': '--.', 'H': '....',
@@ -26,7 +26,7 @@ def encode(word):
     word = word.upper()
     morse_code = ""
 
-    """Runs each letter in the word to find it corresponding morse code in the dict and the code to 
+    """Runs each letter in the word to find its corresponding morse code in the dict and adds the morse code to 
     the variable morse_code"""
     for letter in word:
         morse_code += f"{MORSE_CODE_DICTIONARY[letter]} "
@@ -38,7 +38,7 @@ def encode(word):
 def decode(coded_word):
     list = []
     new_word = ""
-    # Takes the morse code that is separated by space int a list or morse code
+    # Takes the morse code that is separated by space and appends it to the list
     for symbol in coded_word:
         if symbol == " ":
             list.append(new_word)
